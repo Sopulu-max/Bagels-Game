@@ -2,7 +2,7 @@
 
 import random
 
-NUM_DIGITS = 3
+NUM_DIGITS = 4
 MAX_GUESSES = 10
 
 def get_secret_num():
@@ -14,10 +14,9 @@ def get_secret_num():
   return secret_num
 
 def get_clues(guess, secret_num):
+  clues = []
   if guess == secret_num:
     return "You got it!"
-
-  clues = []
 
   for i in range(len(guess)):
     if guess[i] == secret_num[i]:
